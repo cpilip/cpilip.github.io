@@ -1,5 +1,1 @@
----
-layout: portfolio
----
-
 # > portfolio
