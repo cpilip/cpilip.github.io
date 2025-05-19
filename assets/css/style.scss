@@ -18,18 +18,18 @@ h4,
 h5,
 h6 {
   color: #fff;
+}
+
+h1
+{
   margin: 0 0 20px;
 }
 
 h1,
+h2,
 h3,
 h4 {
   font-family: "Pixel"
-}
-
-h2 {
-  font-family: "Pixel";
-  font-weight: 600;
 }
 
 .wrapper {
@@ -67,11 +67,6 @@ blockquote {
   font-style: italic
 }
 
-strong {
-  color: white;
-  font-weight: 600;
-}
-
 a {
   color: #3d91ff;
   text-decoration: none;
@@ -86,22 +81,15 @@ a:hover p {
   position: absolute;
 }
 
+ul,
+ol {
+  padding-left: revert;
+}
 
 nav {
   display: flex;
   background-color: #464f59;
   padding: 10px;
-}
-
-.break {
-  display: flex;
-  background-color: #464f59;
-  margin-bottom: 20px;
-}
-
-ul,
-ol {
-  padding-left: revert;
 }
 
 nav ul {
@@ -131,6 +119,12 @@ nav ul li a:hover {
   transition-duration: 0.5s;
   font-weight: normal;
   text-decoration: none;
+}
+
+.break {
+  display: flex;
+  background-color: #464f59;
+  margin-bottom: 20px;
 }
 
 .row {

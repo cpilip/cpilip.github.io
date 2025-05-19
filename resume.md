@@ -12,6 +12,8 @@ Unreal Engine 5.
 
 - Attended the [2024 ESRI User Conference](https://www.esri.com/en-us/about/events/uc/overview) in San Diego, California in July 2024 as a new grad to get familiarized with the GIS software community.
 
+&nbsp;
+
 ## Undergraduate Teaching Assistant 
 
 **McGill University** from January – May 2022, January – May 2023
@@ -21,6 +23,8 @@ C++.
 
 - Supported students by explaining complex C++ concepts, debugging code, and grading assign‐
 ments/quizzes.
+
+&nbsp;
 
 ## Software Developer Intern
 
