@@ -53,15 +53,43 @@
       <div id="portfolio" class="portfolio">
         <br>
         <h1>> portfolio</h1>
+        <h2>graphics (c++)</h2>
         <div class="container">
           {% for project in site.portfolio %}
+          {% if project.tags contains "graphics" %}
           <div class="element">
             <a href="{{ project.link }}">
               <img src="{{ project.image }}">
               <h2>{{ project.title }}</h2>
-              <p>{{ project.content | markdownify }}</p>
             </a>
           </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <h2>software (c++, c)</h2>
+        <div class="container">
+          {% for project in site.portfolio %}
+          {% if project.tags contains "software" %}
+          <div class="element">
+            <a href="{{ project.link }}">
+              <img src="{{ project.image }}">
+              <h2>{{ project.title }}</h2>
+            </a>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <h2>games (unity - c#)</h2>
+        <div class="container">
+          {% for project in site.portfolio %}
+          {% if project.tags contains "games" %}
+          <div class="element">
+            <a href="{{ project.link }}">
+              <img src="{{ project.image }}">
+              <h2>{{ project.title }}</h2>
+            </a>
+          </div>
+          {% endif %}
           {% endfor %}
         </div>
       </div>

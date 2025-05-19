@@ -157,6 +157,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 20px;
   }
 
   div.element {
@@ -186,7 +187,7 @@ nav ul li a:hover {
     height: 100%;
   }
 
-  h2 {
+  div.element h2 {
     padding: 10px 20px 0px;
   }
 
@@ -259,9 +260,9 @@ footer {
 }
 
 .linkedin {
-  background-image: url('../images/linkedin_logo.png');
+  background-image: url('../../images/linkedin_logo.png');
 }
 
 .github {
-  background-image: url('../images/github_logo.png');
+  background-image: url('../../images/github_logo.png');
 }
