@@ -21,9 +21,19 @@
           <li><a href="http://localhost:4000/portfolio">portfolio</a></li>
         </ul>
       </nav>
-      <section>
+      <section class="portfolio">
         <br>
         {{ content }}
+        <div class="container">
+          {% for project in site.portfolio %}
+          <div class="element">
+            <a href="{{ project.link }}"><h2>{{ project.title }}</h2>
+            <img src="{{ project.img }}">
+            </a>
+            {{ project.content | markdownify }}
+          </div>
+          {% endfor %}
+        </div>
       </section>
       <footer>
         <p><small>hosted on github pages. <br> original theme by <a href="https://github.com/orderedlist">orderedlist</a>, modified by me.</small></p>
