@@ -1,0 +1,74 @@
+---
+layout: base
+---
+
+<!-- Project Hero -->
+{% if page.hero_image %}
+<section class="project-hero" style="background-image: url('{{ page.hero_image | relative_url }}');">
+</section>
+{% endif %}
+<!-- Project Hero Ends -->
+
+
+<!-- Project Header -->
+<section class="uk-margin-small-left uk-margin-small-right uk-margin-large-top">
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+        <h1 class="uk-light uk-text-center">
+            {{ page.title }}
+        </h1>
+
+        {% if page.role %}
+        <p class="uk-text-center">
+            {{ page.role }}
+        </p>
+        {% endif %}
+
+        {% if page.team_size %}
+        <p class="uk-text-center">
+            Team Size: {{ page.team_size }}
+        </p>
+        {% endif %}
+
+        {% if page.timeline %}
+        <p class="uk-text-center">
+            {{ page.timeline }}
+        </p>
+        {% endif %}
+
+        {% if page.tags %}
+        <div class="uk-text-center">
+
+            {% for tag in page.tags %}
+            <span class="uk-label">
+                {{ tag }}
+            </span>
+            {% endfor %}
+
+        </div>
+        {% endif %}
+
+        {% if page.description %}
+        <p class="uk-text-center uk-margin-large-top">
+            {{ page.description }}
+        </p>
+        {% endif %}
+
+    </div>
+
+</section>
+<!-- Project Header Ends -->
+
+
+<!-- Project Content -->
+<section class="uk-margin-small-left uk-margin-small-right uk-margin-large-top uk-margin-xlarge-bottom">
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+        {{ content }}
+
+    </div>
+
+</section>
+<!-- Project Content Ends -->

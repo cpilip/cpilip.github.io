@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        
-      </header>
-      <nav>
-        <ul>
-          <li><a href="http://localhost:4000/">home</a></li>
-          <li><a href="http://localhost:4000/resume">resume</a></li>
-          <li><a href="http://localhost:4000/portfolio">portfolio</a></li>
-        </ul>
-      </nav>
-      <section class="portfolio">
-        <br>
-        {{ content }}
-        <div class="container">
-          {% for project in site.portfolio %}
-          <div class="element">
-            <a href="{{ project.link }}"><h2>{{ project.title }}</h2>
-            <img src="{{ project.img }}">
-            </a>
-            {{ project.content | markdownify }}
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-      <footer>
-        <p><small>hosted on github pages. <br> original theme by <a href="https://github.com/orderedlist">orderedlist</a>, modified by me.</small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+
+    <link rel="stylesheet" href="../css/uikit.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/uikit.js"></script>
+    <script src="../js/uikit-icons.js"></script>
+</head>
+
+<body>
+
+    <section class="uk-margin-xlarge-left uk-margin-xlarge-right uk-margin-xlarge-top">
+        <a href="../index.html#projects" class="uk-button uk-button-secondary">← Back</a>
+
+        <h1 class="uk-light uk-margin-large-top">Project Name</h1>
+
+        <p>
+            Write your project description here.
+        </p>
+
+        <h3 class="uk-light">What I Did</h3>
+        <p>
+            Explain your role, tools used, and what you built.
+        </p>
+
+        <h3 class="uk-light">Screenshots</h3>
+        <img src="../images/project-1.png" alt="Project screenshot">
+
+    </section>
+
+</body>
+
 </html>
