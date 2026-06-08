@@ -1,3 +1,0 @@
-# Hello world!
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis porttitor est, a hendrerit risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at libero semper enim consequat consectetur. Nulla in lacus ultrices, sollicitudin lectus et, blandit enim. Sed ullamcorper odio in mollis consectetur. Cras eget mi vestibulum, commodo metus a, eleifend eros. Duis ac sodales tortor, non varius ligula.

@@ -1,0 +1,411 @@
+/* =========================================================
+   Theme
+   ========================================================= */
+
+:root {
+    --bg: #111111;
+    --surface: #181818;
+    --border: #252525;
+
+    --text-primary: #F5F5F5;
+    --text-secondary: #dee1e4;
+
+--accent: #5E81AC;
+}
+
+
+/* =========================================================
+   Fonts
+   ========================================================= */
+
+html,
+body {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+p,
+li,
+blockquote,
+dd,
+td {
+    font-family: 'Aptos', sans-serif;
+}
+
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+p,
+li {
+    color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+a {
+    transition: color 0.2s ease;
+}
+
+a:hover,
+.uk-button-text:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Social Icons
+   ========================================================= */
+
+[uk-icon] {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Project Cards
+   ========================================================= */
+
+.uk-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.uk-card-media-top img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   Work Experience Timeline
+   ========================================================= */
+
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 1.5rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+}
+
+.timeline-card {
+    margin-left: 1rem;
+}
+
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+
+/* Make navbar background transparent normally */
+
+.uk-navbar-container {
+    background: transparent;
+}
+
+/* Background when navbar becomes sticky */
+
+.uk-navbar-sticky {
+    background: #151515;
+}
+
+/* Horizontal padding for the entire navbar */
+
+.nav-full {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+/* Navigation links */
+
+.uk-navbar-nav > li > a {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Hover state */
+
+.uk-navbar-nav > li > a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Navbar Separators
+   ========================================================= */
+
+/*
+    Make each navigation item a flex container so
+    the separator aligns nicely with the text.
+*/
+
+.uk-navbar-nav > li {
+    display: flex;
+    align-items: center;
+}
+
+/*
+    Add a slash after every item except the last one.
+
+    Result:
+
+    Home / Resume / Projects / Contact
+*/
+
+.uk-navbar-nav > li:not(:last-child)::after {
+    content: "/";
+
+    color: var(--accent);
+
+    margin-left: 4px;
+    margin-right: 4px;
+
+    opacity: 0.75;
+
+    font-weight: 400;
+}
+
+/*
+    Slightly brighten separator when hovering
+    the associated navigation item.
+*/
+
+.uk-navbar-nav > li:hover::after {
+    opacity: 1;
+}
+
+/* =========================================================
+   Project Pages
+   ========================================================= */
+
+.project-hero {
+    width: 100%;
+    height: 360px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project-panel {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 48px 64px;
+}
+
+.project-panel h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.project-tags span,
+.uk-label {
+    background: rgba(137, 180, 250, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(137, 180, 250, 0.25);
+    border-radius: 18px;
+    padding: 10px 16px;
+    font-size: 0.8rem;
+}
+
+.project-description {
+    max-width: 900px;
+    margin: 24px auto 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   Optional Accent Headings
+   ========================================================= */
+
+.section-heading {
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+    .nav-full {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-panel {
+        padding: 32px 24px;
+    }
+
+    .project-hero {
+        height: 240px;
+    }
+
+}
+
+/* =========================================================
+   Mobile Navigation Menu
+   ========================================================= */
+
+.uk-offcanvas-bar {
+    background: #111111;
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li > a {
+    font-family: 'IBM Plex Mono', monospace;
+
+    color: var(--text-primary);
+
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+
+    text-transform: none;
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li > a:hover {
+    color: var(--accent);
+}
+
+/* =========================================================
+   Logo
+   ========================================================= */
+
+.uk-logo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    color: var(--text-primary) !important;
+}
+
+.uk-logo:hover {
+    color: var(--accent) !important;
+}
+
+
+.skills-list li::marker {
+    color: var(--accent);
+}
+
+.section-title {
+    color: var(--text-primary);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Timeline metadata */
+
+.timeline-role,
+.timeline-date,
+.timeline-company {
+    font-family: 'IBM Plex Mono', monospace;
+        color: var(--text-primary);
+}
+
+/* =========================================================
+   Skills Cards
+   ========================================================= */
+
+#skills .uk-card {
+    height: 100%;
+}
+
+#skills .uk-card-body {
+    padding: 20px;
+}
+
+#skills .uk-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+#skills .skills-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+#skills .skills-list li {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.hero-wrapper {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content {
+    max-width: 80ch;
+}
+
+/* Mobile nav breakpoint */
+
+@media (max-width: 960px) {
+
+    .hero-wrapper {
+        max-width: none;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+}

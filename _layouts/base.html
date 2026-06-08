@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/uikit.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/uikit.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/uikit-icons.js' | relative_url }}"></script>
+
+    <!-- Page Title -->
+    <title>
+        {% if page.title %}
+        {{ site.title }} | {{ page.title }}
+        {% else %}
+        {{ site.title }}
+        {% endif %}
+    </title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="uk-visible@m">
+
+        <nav class="uk-navbar-container nav-full" uk-navbar uk-sticky="cls-active: uk-navbar-sticky">
+
+            <!-- Logo -->
+            <div class="uk-navbar-left">
+
+                <a href="{{ '/' | relative_url }}" class="uk-navbar-item uk-logo uk-light">
+
+                </a>
+
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="uk-navbar-right">
+
+                <ul class="uk-navbar-nav uk-light">
+
+                    <li>
+                        <a class="uk-button-text uk-text-uppercase" href="{{ '/' | relative_url }}">
+                            home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="uk-button-text uk-text-uppercase" href="{{ '/files/resume.pdf' | relative_url }}">
+                            resume
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="uk-button-text uk-text-uppercase" href="{{ '/#projects' | relative_url }}">
+                            projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="uk-button-text uk-text-uppercase" href="mailto:pilipchristina@gmail.com">
+                            contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- Navigation Bar Ends -->
+
+    <!-- Navigation Bar Mobile -->
+    <div class="uk-hidden@m">
+
+        <nav class="uk-navbar-container nav-full" uk-navbar uk-sticky="cls-active: uk-navbar-sticky">
+
+            <!-- Mobile Logo -->
+            <div class="uk-navbar-left">
+
+                <a href="{{ '/' | relative_url }}" class="uk-navbar-item uk-logo uk-light">
+
+                </a>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="uk-navbar-right">
+
+                <button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- Navigation Bar Mobile Ends -->
+
+
+    <!-- Mobile Navigation Menu -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+
+                <li>
+                    <a href="{{ '/' | relative_url }}">
+                        HOME
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ '/#resume' | relative_url }}">
+                        RESUME
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ '/#projects' | relative_url }}">
+                        PROJECTS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:pilipchristina@gmail.com">
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- Mobile Navigation Menu Ends -->
+
+
+    <!-- Page Content -->
+    {{ content }}
+    <!-- Page Content Ends -->
+
+</body>
+
+</html>
